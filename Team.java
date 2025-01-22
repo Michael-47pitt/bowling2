@@ -4,13 +4,13 @@ public class Team
 {
 	ArrayList<Player> teamPlayers = new ArrayList<Player>();
 	
-	public boolean addPlayer(Player p)
+	public static boolean addPlayer(Player p)
 	{
 		teamPlayers.add(p);
 		return true;
 	}
 	
-	public boolean removePlayer(String name)
+	public static boolean removePlayer(String name)
 	{
 		int i = 0;
 		while(i < teamPlayers.size())
@@ -25,7 +25,21 @@ public class Team
 		return true;
 	}
 	
-	public void displayPlayers()
+	public static Player getPlayer(String name)
+	{
+		int i = 0;
+		while(i < teamPlayers.size())
+		{
+			if(teamPlayers.get(i).getName().equals(name))
+			{
+				return teamPlayers.get(i);
+			}
+		}
+		return null;
+	}
+	
+	
+	public static void displayPlayers()
 	{
 		System.out.println("Player:\tScore:");
 		int i = 0;
