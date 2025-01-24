@@ -10,12 +10,11 @@ public class BowlingTeamApp
 		boolean loop = true;		//loop control
 		int action = 0;
 		
-		//main loop
-		while(loop)
-		{
-			//interface print
-			System.out.print("1. Add player\n" + "2. Remove player\n" + 
+		System.out.print("1. Add player\n" + "2. Remove player\n" + 
 			"3. View all players and scores\n" + "4. Update a player's score\n" + "5. Exit app\n");
+		//main loop
+		do
+		{
 			
 			//prompt action number
 			System.out.print("Enter an action number: ");
@@ -41,7 +40,7 @@ public class BowlingTeamApp
 				case 5:		loop = false;
 				default: 	System.out.println("ERROR: Invalid input. Please try again.");
 			}	
-		}
+		} while (loop);
 		
 	}
 	
