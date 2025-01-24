@@ -37,7 +37,7 @@ public class BowlingTeamApp
 							System.out.println("Enter updated score: ");
 							int newScore = input.nextInt();
 							updateScore(Team.getPlayer(name), newScore);
-				case 5:		loopStatus = false
+				case 5:		loopStatus = false;
 				default: 	System.out.println("ERROR: Invalid input. Please try again.");
 				
 		}
@@ -63,7 +63,7 @@ public class BowlingTeamApp
 	
 	public static void view()
 	{
-		displayPlayers()
+		displayPlayers();
 	}
 	
 	public static void updateScore(Player p, int score)
