@@ -46,6 +46,7 @@ public class Team
 		while(i < teamPlayers.size())
 		{
 			System.out.println(teamPlayers.get(i).getName() + "\t" + teamPlayers.get(i).getScore());
+			i++;
 		}
 	}
 	
