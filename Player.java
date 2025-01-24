@@ -1,9 +1,10 @@
 
+
 public class Player {
+	
 	//Variables 
 	String playerName = "";
 	int playerScore = 0;
-	
 	
 	//Methods
 	public boolean createNewPlayer(String name){
@@ -24,5 +25,5 @@ public class Player {
 		return playerScore;
 	}
 	
-	//This is added from the new branch
+	
 }
