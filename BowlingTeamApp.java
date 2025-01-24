@@ -18,9 +18,9 @@ public class BowlingTeamApp
 			"3. View all players and scores\n" + "4. Update a player's score\n" + "5. Exit app\n");
 			
 			//prompt action number
-			System.out.println("Enter an action number: ");
+			System.out.print("Enter an action number: ");
 			action = input.nextInt();
-			String name = "";
+			String name;
 			//decide action
 			switch (action) {
 				case 1: 	System.out.print("Enter player name to add: ");
