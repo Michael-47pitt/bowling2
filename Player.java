@@ -6,9 +6,9 @@ public class Player {
 	
 	
 	//Methods
-	public boolean createNewPlayer(String name){
+	public Player(String name){
 		playerName = name;
-		return true;
+		playerScore=0;
 	}
 	
 	public int updateScore(int score){

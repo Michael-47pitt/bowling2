@@ -33,7 +33,7 @@ public class BowlingTeamApp
 							removePlayer(name);
 				case 3: 	view();
 				case 4: 	System.out.println("Enter name of player to update: ");
-							String name = input.nextLine();
+							name = input.nextLine();
 							System.out.println("Enter updated score: ");
 							int newScore = input.nextInt();
 							updateScore(Team.getPlayer(name), newScore);
@@ -47,9 +47,9 @@ public class BowlingTeamApp
 	public static void addPlayer(String name, int score)
 	{
 		//create player and add to the team
-		Player temp = createNewPlayer(name);
+		Player temp = new Player(name);
 		temp.updateScore(score);
-		addPlayer(temp);
+		Team.addPlayer(temp);
 		
 		System.out.println(name + " was added to the team");
 	}
@@ -57,13 +57,13 @@ public class BowlingTeamApp
 	public static void removePlayer(String name)
 	{
 		//remove player from the team
-		removePlayer(name);
+		Team.removePlayer(name);
 		System.out.println(name + " was removed from the team");
 	}
 	
 	public static void view()
 	{
-		displayPlayers();
+		Team.displayPlayers();
 	}
 	
 	public static void updateScore(Player p, int score)

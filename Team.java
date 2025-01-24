@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Team 
 {
-	ArrayList<Player> teamPlayers = new ArrayList<Player>();
+	static ArrayList<Player> teamPlayers = new ArrayList<Player>();
 	
 	public static boolean addPlayer(Player p)
 	{
