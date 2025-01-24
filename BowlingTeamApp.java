@@ -23,18 +23,18 @@ public class BowlingTeamApp
 			String name = "";
 			//decide action
 			switch (action) {
-				case 1: 	System.out.println("Enter player name to add: ");
+				case 1: 	System.out.print("Enter player name to add: ");
 							name = input.nextLine();
-							System.out.println("Enter player score: ");
+							System.out.print("Enter player score: ");
 							int score = input.nextInt();
 							addPlayer(name, score);
-				case 2: 	System.out.println("Enter player name to remove: ");
+				case 2: 	System.out.print("Enter player name to remove: ");
 							name = input.nextLine();
 							removePlayer(name);
 				case 3: 	view();
-				case 4: 	System.out.println("Enter name of player to update: ");
+				case 4: 	System.out.print("Enter name of player to update: ");
 							name = input.nextLine();
-							System.out.println("Enter updated score: ");
+							System.out.print("Enter updated score: ");
 							int newScore = input.nextInt();
 							updateScore(Team.getPlayer(name), newScore);
 				case 5:		loop = false;
