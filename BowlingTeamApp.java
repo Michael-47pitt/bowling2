@@ -28,16 +28,21 @@ public class BowlingTeamApp
 							System.out.print("Enter player score: ");
 							int score = input.nextInt();
 							addPlayer(name, score);
+							break;
 				case 2: 	System.out.print("Enter player name to remove: ");
 							name = input.nextLine();
 							removePlayer(name);
+							break;
 				case 3: 	view();
+							break;
 				case 4: 	System.out.print("Enter name of player to update: ");
 							name = input.nextLine();
 							System.out.print("Enter updated score: ");
 							int newScore = input.nextInt();
 							updateScore(Team.getPlayer(name), newScore);
+							break;
 				case 5:		loop = false;
+							break;
 				default: 	System.out.println("ERROR: Invalid input. Please try again.");
 			}	
 		} while (loop);
