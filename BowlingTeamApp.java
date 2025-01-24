@@ -24,6 +24,7 @@ public class BowlingTeamApp
 			//decide action
 			switch (action) {
 				case 1: 	System.out.print("Enter player name to add: ");
+							input.nextLine();
 							name = input.nextLine();
 							System.out.print("Enter player score: ");
 							int score = input.nextInt();
