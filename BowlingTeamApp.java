@@ -30,12 +30,14 @@ public class BowlingTeamApp
 							addPlayer(name, score);
 							break;
 				case 2: 	System.out.print("Enter player name to remove: ");
+							input.nextLine();
 							name = input.nextLine();
 							removePlayer(name);
 							break;
 				case 3: 	view();
 							break;
 				case 4: 	System.out.print("Enter name of player to update: ");
+							input.nextLine();
 							name = input.nextLine();
 							System.out.print("Enter updated score: ");
 							int newScore = input.nextInt();
