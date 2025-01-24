@@ -7,11 +7,11 @@ public class BowlingTeamApp
 		
 		Scanner input = new Scanner(System.in);
 		
-		int loop = true;		//loop control
+		boolean loop = true;		//loop control
 		int action = 0;
 		
 		//main loop
-		while(loopStatus)
+		while(loop)
 		{
 			//interface print
 			System.out.print("1. Add player\n" + "2. Remove player\n" + 
@@ -20,16 +20,16 @@ public class BowlingTeamApp
 			//prompt action number
 			System.out.println("Enter an action number: ");
 			action = input.nextInt();
-			
+			String name = "";
 			//decide action
 			switch (action) {
 				case 1: 	System.out.println("Enter player name to add: ");
-							String name = input.nextLine();
+							name = input.nextLine();
 							System.out.println("Enter player score: ");
 							int score = input.nextInt();
 							addPlayer(name, score);
 				case 2: 	System.out.println("Enter player name to remove: ");
-							String name = input.nextLine();
+							name = input.nextLine();
 							removePlayer(name);
 				case 3: 	view();
 				case 4: 	System.out.println("Enter name of player to update: ");
@@ -37,7 +37,7 @@ public class BowlingTeamApp
 							System.out.println("Enter updated score: ");
 							int newScore = input.nextInt();
 							updateScore(Team.getPlayer(name), newScore);
-				case 5:		loopStatus = false;
+				case 5:		loop = false;
 				default: 	System.out.println("ERROR: Invalid input. Please try again.");
 			}	
 		}
