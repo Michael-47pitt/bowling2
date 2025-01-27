@@ -7,7 +7,6 @@ public class Player {
     //Variables 
     String playerName = "";
     int playerScore = 0;
-
     Gson gson = new Gson();
 
     //Methods
@@ -27,6 +26,19 @@ public class Player {
 
     public int getScore() {
         return playerScore;
+    }
+
+    public void setName(String n) {
+        playerName = n;
+    }
+
+    public void setScore(int s) {
+        playerScore = s;
+    }
+
+    public String playerToJson(Player p) {
+        String playerJSON = gson.toJson(p);
+        return playerJSON;
     }
 
 }
