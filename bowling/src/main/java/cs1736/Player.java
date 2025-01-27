@@ -10,9 +10,9 @@ public class Player {
     Gson gson = new Gson();
 
     //Methods
-    public boolean createNewPlayer(String name) {
+    public Player(String name) {
         playerName = name;
-        return true;
+        
     }
 
     public int updateScore(int score) {
