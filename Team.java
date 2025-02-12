@@ -1,4 +1,10 @@
 import java.util.ArrayList;
+//import com.google.gson.Gson;
+//import com.google.gson.reflect.TypeToken;
+import java.io.FileReader;
+import java.io.IOException;
+import java.lang.reflect.Type;
+import java.io.FileWriter;
 
 public class Team 
 {
@@ -49,5 +55,29 @@ public class Team
 			i++;
 		}
 	}
+	/*
+	public static void save()
+	{
+		Gson gson = new GsonBuilder.setPrettyPrinting().create();
+		try (FileWriter writer = new FileWriter("players.json"))
+		{
+			gson.toJson(teamPlayers, writer);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 	
+	public static void load()
+	{
+		Gson gson = new Gson();
+		Type listType = new TypeToken<List<Player>>() {}.getType();
+		
+		try (FileReader reader = new FileReader("players.json")
+		{
+			List<Player> players = gson.fromJson(reader, listType);
+		} catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+		*/
 }	
